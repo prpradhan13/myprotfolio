@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Light Mode */
+    --primary-background-color: #fff;
+    --primary-text-color: #000;
+    --secondary-color: #575757;
+    --btn-bg-color: #2196f3;
+    --cta-hover-color: #167bce;
+    --btn-bg-light: #eee;
+    
+    /* Dark Mode */
+    --dark-primary-background-color: #222;
+    --dark-primary-text-color: #fff;
+    --dark-secondary-color: #828282;
+    --dark-btn-bg-color: #1e88e5;
+    --dark-cta-hover-color: #0d5e8c;
+    --dark-btn-bg-light: #eee;
+}
+
+.dark_theme{
+    --primary-background-color: var(--dark-primary-background-color);
+    --primary-text-color: var(--dark-primary-text-color);
+    --secondary-color: var(--dark-secondary-color);
+    --btn-bg-color: var(--dark-btn-bg-color);
+    --cta-hover-color: var(--dark-cta-hover-color);
+    --btn-bg-light: var(--dark-btn-bg-light);
+}
+
+body{
+    margin: 0;
+    background-color: var(--primary-background-color) ;
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+
+.theme_btn{
+    position: relative;
+    left: 8.5rem;
+}
+
+h1,h2,h3,p{
+    margin: 0;
+    cursor: default;
+}
+
+article, footer, .hero, .logo_container, .experience, .cta, .portfolio_skills, .btn_bg, .portfolio, .skills{
+    display: flex;
+}
+
+.hero, .portfolio, .skills{
+    flex-direction: column;
+}
+
+.hero, .btn_bg, .portfolio, .skills{
+    align-items: center;
+}
+
+.theme_btn, .logo_container a, .logo_container img{
+    height: 1.5rem;
+}
+
+.hero, .experience, .wrapper{
+    text-align: center;
+}
+
+article, .hero, .logo_container, .portfolio ,.skills{
+    gap: 1rem;
+}
+
+.hero_pic{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.inner_circle{
+    contain: "";
+    position: absolute;
+    top: 0.1rem;
+    left: 0.1rem;
+    bottom: 0.1rem;
+    right: 0.1rem;
+    border-radius: 50%;
+    border: 0.18rem solid var(--primary-background-color);
+    z-index: 1;
+}
+
+.hero_pic img, .wrapper img{
+    width: 100%;
+}
+
+.hero_pic img{
+    height: 100%;
+    object-fit: cover;
+    object-position: top 1.3rem right 0.1rem;
+    transform: scale(1.9);
+}
+
+.hero_info h1, h2{
+    font-weight: 400;
+}
+
+article p, .hero_info h2{
+    color: var(--secondary-color);
+}
+
+.hero_info h2{
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+footer, .logo_container, .experience, .cta, .portfolio_skills, .btn_bg{
+    justify-content: center;
+}
+
+.experience{
+    margin: auto;
+    margin-top: 1.4rem;
+    max-width: 20rem;
+}
+
+.experience b{
+    font-weight: 600;
+}
+
+.experience h2{
+    width: 30%;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.cta{
+    margin-top: 1.2rem;
+}
+
+.cta, .btn_bg{
+    gap: 2rem;
+}
+
+.btn, .btn_2, .btn_bg{
+    border-radius: 0.7rem;
+    border: none;
+}
+
+.btn, .btn_2, .btn_bg, .wrapper h3{
+    font-weight: 600;
+}
+
+.btn, .btn_2, .btn_bg, .wrapper, .project_wrapper{
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* .download_btn{
+    background-color: var(--btn-bg-color);
+    color: var(--primary-background-color);
+} */
+
+.download_btn:hover{
+    background-color: var(--cta-hover-color);
+}
+
+.theme_btn, .download_btn:hover, .contact_btn:hover, .btn_2:hover, .wrapper img:hover{
+    cursor: pointer;
+}  
+
+.btn:hover, .btn_2:hover, .project_wrapper:hover, .logo_container a:hover{
+    transform: scale(0.98);
+}   
+
+.btn:active, .btn_2:active, .project_wrapper:active, .logo_container a:active{
+    transform: scale(1);
+}
+
+.contact_btn:hover, .download_btn{
+    background-color: var(--btn-bg-color);
+    color: white;
+}
+
+.contact_btn:hover{
+    transition: background-color 0.3s ease, color 0.3 ease;
+}
+
+.btn_2:hover, .active_btn{
+    background-color: #fff;
+}
+
+.btn, .btn_2{
+    height: 3rem;
+}
+
+.btn{
+    width: 9rem;
+}
+
+.btn_2{
+    width: 8.5rem;
+}
+
+.download_btn{
+    transition: background-color 0.3s ease;
+}
+
+
+.portfolio_skills{
+    height: 4rem;
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.btn_bg, .wrapper{
+    width: 20rem;
+}
+
+article p, .btn_bg{
+    background-color: var(--btn-bg-light);
+}
+
+.hero, .portfolio, .skills{
+    margin-top: 2rem;
+}
+
+.skills{
+    display: none;
+}
+
+.wrapper img{
+    border-radius: 1rem;
+}
+
+article, .wrapper h3{
+    margin-bottom: 1.5rem;
+}
+
+article{
+    flex-wrap: wrap;
+}
+
+article p{
+    border-radius: 0.5rem;
+    flex-grow: 20;
+    padding: 1rem;
+}
+
+footer{
+    margin: 3rem 0;
+}
+
+@media screen and (min-width: 900px) {
+    .skills, .portfolio{
+        flex-direction: row;
+        width: 45rem;
+    }
+    .skills{
+        margin: 2rem auto 0;
+        justify-content: center;
+    }
+    .portfolio{
+        margin: 2rem auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .wrapper{
+        width: calc(48%);
+        flex: none;
+    }
+}
