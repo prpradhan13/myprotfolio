@@ -61,3 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadTheme();
 })
+
+// set copyright year dynamically
+const paraTag = document.querySelector('footer p');
+const year = new Date().getFullYear();
+paraTag.innerHTML += year
